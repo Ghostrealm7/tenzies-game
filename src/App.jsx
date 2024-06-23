@@ -5,16 +5,23 @@ import Die from "./Die";
 import { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 
+// features to add : track rolls, track time, save best time/roll to localstorage, dark mode
+
 function App() {
   const [dice, setDice] = useState(allNewDice());
   const [tenzies, setTenzies] = useState(false);
+  const [rollCount, setRollCount] = useState(0);
+
+  const instructions =
+    "Roll until all dice are the same. Click each die to freeze it at its current value between rolls";
+  const winMessage = `You won in ${rollCount} rolls!`;
 
   useEffect(() => {
     const allHeld = dice.every((die) => die.isHeld);
     const allSameValue = dice.every((die) => die.value === dice[0].value);
     if (allHeld && allSameValue) {
       setTenzies(true);
-      console.log("You won!");
+      console.log(`You won in ${rollCount} rolls!`);
     }
   }, [dice]);
 
@@ -33,6 +40,7 @@ function App() {
   function newGame() {
     setDice(allNewDice());
     setTenzies((prevTenzies) => !prevTenzies);
+    setRollCount(0);
   }
 
   function rollDice() {
@@ -41,6 +49,7 @@ function App() {
         return die.isHeld ? die : { ...die, value: Math.ceil(Math.random() * 6), id: nanoid() };
       })
     );
+    setRollCount((prevRollCount) => prevRollCount + 1);
   }
 
   function holdDice(id) {
@@ -60,10 +69,7 @@ function App() {
       <main>
         {tenzies && <Confetti />}
         <h1 className="title">Tenzies</h1>
-        <p className="instructions">
-          Roll until all dice are the same. Click each die to freeze it at its current value between
-          rolls.
-        </p>
+        <p className="instructions"> {tenzies ? winMessage : instructions}</p>
         <div className="die-container">{diceElements}</div>
         <button className="roll-dice" onClick={tenzies ? newGame : rollDice}>
           {tenzies ? "New Game" : "Roll"}
