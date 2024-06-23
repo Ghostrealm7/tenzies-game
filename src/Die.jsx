@@ -2,7 +2,7 @@ import React from "react";
 
 function Die({ isHeld, value, holdDice, id }) {
   const styles = {
-    backgroundColor: isHeld ? "#59E391" : "white",
+    backgroundColor: isHeld ? "#56CBF9" : "white",
   };
 
   return (

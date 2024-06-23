@@ -48,7 +48,12 @@ main {
   font-size: 2rem;
 }
 
-.roll-dice {
+.die:hover {
+  color:#81F4E1;
+}
+
+
+/* .roll-dice {
   height: 50px;
   width: 150px;
   border: none;
@@ -58,8 +63,34 @@ main {
   font-size: 1.2rem;
   font-family: 'Karla', sans-serif;
   cursor: pointer;
+} */
+
+.roll-dice {
+  color: black;
+  border: none;
+  width: 100px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-family: 'Karla', sans-serif;
+  border-radius: 6px;
+  background-color: #56CBF9;
+  cursor: pointer;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    rotate 0.5s;
+}
+
+.roll-dice:hover {
+  background-color: #56CBF9;
+  rotate: 180deg;
 }
 
 .roll-dice:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.instructions {
+  font-size: 0.8rem;
 }
