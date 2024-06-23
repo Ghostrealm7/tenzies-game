@@ -21,7 +21,6 @@ function App() {
     const allSameValue = dice.every((die) => die.value === dice[0].value);
     if (allHeld && allSameValue) {
       setTenzies(true);
-      console.log(`You won in ${rollCount} rolls!`);
     }
   }, [dice]);
 
