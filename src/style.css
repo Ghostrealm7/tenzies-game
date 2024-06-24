@@ -1,7 +1,5 @@
 /* Custom Variables */
 
-/* hold color #125E8A light*/
-
 :root {
   --bg-color: #F5F5F5;
   --fg-color: #D3AB9E;
@@ -26,18 +24,18 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 main {
+  height: 100vh;
   display: flex;
-  margin: 0;
   padding: 20px;
   background-color: black;
   justify-content: center;
   align-items: center;
   font-family: 'Karla', sans-serif;
-  height: 30rem;
-  transition: background-color 0.25s ease-in-out;
 }
 
 .main-container {
@@ -51,6 +49,7 @@ main {
   max-width: auto;
   border-radius: 5px;
   padding: 25px;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .header-container {

@@ -85,12 +85,8 @@ function App() {
       <main data-theme={isDark ? "dark" : "light"}>
         <div className="main-container">
           {tenzies && <Confetti />}
-          <div className="header-container">
-            <div>
-              <h1 className="title">Tenzies</h1>
-            </div>
-            <Toggle isDark={isDark} changeTheme={changeTheme} />
-          </div>
+          <h1 className="title">Tenzies</h1>
+          <Toggle isDark={isDark} changeTheme={changeTheme} />
           <p className="instructions"> {tenzies ? winMessage : instructions}</p>
           <div className="die-container">{diceElements}</div>
           <button className="roll-dice" onClick={tenzies ? newGame : rollDice}>
