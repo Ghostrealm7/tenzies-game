@@ -1,8 +1,10 @@
-# React + Vite
+A simple tenzies game made with react.js includes dark theme
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To Run
+1. Download project files
+2. Open project folder in VS code editor or anyother code editor
+3. Open terminal then navigate to project folder
+4. Type 'npm install'
+5. Wait for all the packages to download
+6. Then Type 'npm run dev'
+7. Enjoy the game!
