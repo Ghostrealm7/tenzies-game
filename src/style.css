@@ -49,7 +49,7 @@ main {
   max-width: auto;
   border-radius: 5px;
   padding: 25px;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .header-container {
@@ -76,7 +76,7 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .die-num {
