@@ -1,8 +1,8 @@
 A simple tenzies game made with react.js includes dark theme
 
-live project deployed on vercel - https://tenzies-game-neon-beta.vercel.app/
+Live project link - https://tenzies-game-neon-beta.vercel.app/
 
-To Run
+To Run to locally
 1. Download project files
 2. Open project folder in VS code editor or anyother code editor
 3. Open terminal then navigate to project folder
